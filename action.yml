@@ -1,0 +1,8 @@
+name: 'Git 2 Discord'
+description: 'Gets the commits and spits it out again'
+outputs:
+  time: # id of output
+    description: 'The same commits input'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

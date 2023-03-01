@@ -20,8 +20,7 @@ try {
     for (const commit of commits) {
       if (regex.test(commit.message)) {
         discordPayload.embeds.push({
-          title: commit.message,
-          description: `Commit URL: ${commit.url}\nBy: ${commit.author.name}`,
+          description: `**${commit.message}**\nCommit URL: ${commit.url}\nBy: ${commit.author.name}`,
           color: 16711680,
         });
       }
@@ -29,8 +28,7 @@ try {
   } else {
     if (regex.test(headCommit.message)) {
       discordPayload.embeds.push({
-        title: headCommit.message,
-        description: `Commit URL: ${headCommit.url}\nBy: ${headCommit.author.name}`,
+        description: `**${headCommit.message}**\nCommit URL: ${headCommit.url}\nBy: ${headCommit.author.name}`,
         color: 16711680,
       });
     }
